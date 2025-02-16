@@ -8,16 +8,16 @@ Classificador de imagens de gatos e cachorros utilizando **Transfer Learning** c
 
 ## 📋 Índice
 
-1. [Visão Geral](#visão-geral)
+1. [Visão Geral](#visao-geral)
 2. [Dataset](#dataset)
 3. [Requisitos](#requisitos)
-4. [Instalação](#instalação)
+4. [Instalação](#instalacao)
 5. [Uso](#uso)
 6. [Treinamento](#treinamento)
-7. [Métricas e Resultados](#métricas-e-resultados)
+7. [Métricas e Resultados](#metricas-e-resultados)
 8. [Estrutura do Projeto](#estrutura-do-projeto)
-9. [Contribuições](#contribuições)
-10. [Licença](#licença)
+9. [Contribuições](#contribuicoes)
+10. [Licença](#licenca)
 11. [Reconhecimentos](#reconhecimentos)
 
 ---
@@ -31,7 +31,7 @@ O objetivo deste projeto é construir um modelo robusto para distinguir entre im
 ---
 ## 📊 Dataset
 
-O dataset utilizado é o **Cats vs Dogs**, disponível no TensorFlow Datasets. Ele contém aproximadamente **25.000 imagens rotuladas** de gatos e cachorros. O dataset foi dividido da seguinte forma:
+O dataset utilizado é o [**Cats vs Dogs**](https://www.microsoft.com/en-us/research/project/cats-vs-dogs/), disponível no [TensorFlow Datasets](https://www.tensorflow.org/datasets). Ele contém aproximadamente **25.000 imagens rotuladas** de gatos e cachorros. O dataset foi dividido da seguinte forma:
 
 - **Treinamento**: 80% (usado para treinar o modelo).
 - **Validação**: 10% (usado para ajustar hiperparâmetros e monitorar o desempenho).
@@ -51,38 +51,30 @@ Para executar este projeto, você precisa dos seguintes pacotes:
 - NumPy
 
 Instale as dependências com o comando abaixo:
-
-```bash
-pip install tensorflow tensorflow_datasets matplotlib numpy
-🔧 Instalação
+`pip install tensorflow tensorflow_datasets matplotlib numpy`
+## 🔧 Instalação
 Clone o Repositório
-bash
-Copiar
-git clone https://github.com/seu-usuario/cats-vs-dogs-mobilenetv2.git
-cd cats-vs-dogs-mobilenetv2
+`git clone https://github.com/seu-usuario/cats-vs-dogs-mobilenetv2.git
+cd cats-vs-dogs-mobilenetv2`
 Instale as Dependências
-bash
-Copiar
-pip install -r requirements.txt
-🚀 Uso
+`pip install -r requirements.txt`
+## 🚀 Uso
 Treinamento e Avaliação
 Abra o notebook notebooks/cats_vs_dogs_mobilenetv2.ipynb em seu ambiente Jupyter ou Google Colab para treinar e avaliar o modelo.
 
 Teste com Imagens Externas
 Você pode usar a função predict_image para testar o modelo com suas próprias imagens:
 
-python
-Copiar
 from predict import predict_image
 predict_image('caminho/para/sua/imagem.jpg')
-🏋️‍♂️ Treinamento
+## 🏋️‍♂️ Treinamento
 O treinamento é dividido em duas fases:
 
 Treinamento Inicial: As camadas do MobileNetV2 são congeladas, e apenas as camadas superiores são treinadas.
 Fine-Tuning: Parte das camadas do MobileNetV2 é descongelada para ajuste fino.
 Os gráficos de acurácia e loss estão disponíveis no notebook.
 
-📈 Métricas e Resultados
+## 📈 Métricas e Resultados
 Após o treinamento inicial e o fine-tuning, o modelo alcançou os seguintes resultados:
 
 Treinamento Inicial:
@@ -98,9 +90,11 @@ Avaliação Final:
 Acurácia no Teste: ~85-90%
 Gráficos detalhados de acurácia e loss estão disponíveis no notebook.
 
-📂 Estrutura do Projeto
-bash
-Copiar
+## 📂 Estrutura do Projeto
+
+
+```plaintext
+
 cats-vs-dogs-mobilenetv2/
 ├── notebooks/                  # Notebooks Jupyter com código detalhado
 │   └── cats_vs_dogs_mobilenetv2.ipynb
@@ -112,29 +106,29 @@ cats-vs-dogs-mobilenetv2/
 ├── assets/                     # Imagens usadas nos tutoriais
 ├── requirements.txt            # Lista de dependências
 └── README.md                   # Este arquivo
-🤝 Contribuições
+  ```
+
+
+## 🤝 Contribuições
 Contribuições são bem-vindas! Siga os passos abaixo:
 
 Faça um fork deste repositório.
 Crie uma branch para sua contribuição:
-bash
-Copiar
-git checkout -b feature/nova-funcionalidade
+`git checkout -b feature/nova-funcionalidade`
 Envie um pull request detalhando suas alterações.
-📜 Licença
+## 📜 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-🙏 Reconhecimentos
+## 🙏 Reconhecimentos
 TensorFlow Team: Pela disponibilização do dataset cats_vs_dogs e do framework TensorFlow.
 Autores do MobileNetV2: Pelo excelente modelo pré-treinado.
 Comunidade Open Source: Por fornecer ferramentas e recursos que facilitam o desenvolvimento de projetos de IA.
-📸 Exemplo de Predição
+## 📸 Exemplo de Predição
 Exemplo de Predição
-
 Predição: Gato
 Confiança: 98.76%
-🌐 Links Úteis
-TensorFlow Documentation
-MobileNetV2 Paper
-Dataset Cats vs Dogs
+## 🌐 Links Úteis
+- [TensorFlow Documentation](https://www.tensorflow.org/)
+- [MobileNetV2 Paper](https://arxiv.org/abs/1801.04381)
+- [Dataset Cats vs Dogs](https://www.microsoft.com/en-us/research/project/cats-vs-dogs/)
+
 
