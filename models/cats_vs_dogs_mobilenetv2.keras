@@ -1,0 +1,1 @@
+model = tf.keras.models.load_model('models/cats_vs_dogs_mobilenetv2.keras')
