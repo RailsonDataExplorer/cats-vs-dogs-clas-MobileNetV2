@@ -1,0 +1,4 @@
+tensorflow==2.x
+tensorflow_datasets
+matplotlib
+numpy
