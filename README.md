@@ -7,6 +7,7 @@
 Classificador de imagens de gatos e cachorros utilizando **Transfer Learning** com MobileNetV2. Este projeto demonstra como aproveitar modelos pré-treinados para alcançar alta precisão mesmo com datasets limitados, além de demonstrar técnicas como aumento de dados, fine-tuning e avaliação em um conjunto de testes externo.
 
 ## 📋 Índice
+
 1. [Visão Geral](#visão-geral)
 2. [Dataset](#dataset)
 3. [Requisitos](#requisitos)
@@ -53,44 +54,53 @@ Instale as dependências com o comando abaixo:
 
 ```bash
 pip install tensorflow tensorflow_datasets matplotlib numpy
-
-## 🔧 Instalação
-Passo 1: Clone o Repositório
+🔧 Instalação
+Clone o Repositório
+bash
+Copiar
 git clone https://github.com/seu-usuario/cats-vs-dogs-mobilenetv2.git
 cd cats-vs-dogs-mobilenetv2
-Passo 2: Instale as Dependências
+Instale as Dependências
+bash
+Copiar
 pip install -r requirements.txt
-
-## 🚀 Uso
+🚀 Uso
 Treinamento e Avaliação
 Abra o notebook notebooks/cats_vs_dogs_mobilenetv2.ipynb em seu ambiente Jupyter ou Google Colab para treinar e avaliar o modelo.
 
 Teste com Imagens Externas
 Você pode usar a função predict_image para testar o modelo com suas próprias imagens:
+
+python
+Copiar
 from predict import predict_image
 predict_image('caminho/para/sua/imagem.jpg')
-
-## 🏋️‍♂️ Treinamento
+🏋️‍♂️ Treinamento
 O treinamento é dividido em duas fases:
 
-Treinamento Inicial : As camadas do MobileNetV2 são congeladas, e apenas as camadas superiores são treinadas.
-Fine-Tuning : Parte das camadas do MobileNetV2 é descongelada para ajuste fino.
+Treinamento Inicial: As camadas do MobileNetV2 são congeladas, e apenas as camadas superiores são treinadas.
+Fine-Tuning: Parte das camadas do MobileNetV2 é descongelada para ajuste fino.
 Os gráficos de acurácia e loss estão disponíveis no notebook.
 
-## 📈 Métricas e Resultados
+📈 Métricas e Resultados
 Após o treinamento inicial e o fine-tuning, o modelo alcançou os seguintes resultados:
 
-Treinamento Inicial :
+Treinamento Inicial:
+
 Acurácia no Treino: ~85-90%
 Acurácia na Validação: ~80-85%
-Fine-Tuning :
+Fine-Tuning:
+
 Acurácia no Treino: ~90-95%
 Acurácia na Validação: ~85-90%
-Avaliação Final :
+Avaliação Final:
+
 Acurácia no Teste: ~85-90%
 Gráficos detalhados de acurácia e loss estão disponíveis no notebook.
 
 📂 Estrutura do Projeto
+bash
+Copiar
 cats-vs-dogs-mobilenetv2/
 ├── notebooks/                  # Notebooks Jupyter com código detalhado
 │   └── cats_vs_dogs_mobilenetv2.ipynb
@@ -102,27 +112,27 @@ cats-vs-dogs-mobilenetv2/
 ├── assets/                     # Imagens usadas nos tutoriais
 ├── requirements.txt            # Lista de dependências
 └── README.md                   # Este arquivo
-
 🤝 Contribuições
 Contribuições são bem-vindas! Siga os passos abaixo:
 
 Faça um fork deste repositório.
-Crie uma branch para sua contribuição (git checkout -b feature/nova-funcionalidade).
+Crie uma branch para sua contribuição:
+bash
+Copiar
+git checkout -b feature/nova-funcionalidade
 Envie um pull request detalhando suas alterações.
 📜 Licença
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
 🙏 Reconhecimentos
-TensorFlow Team : Pela disponibilização do dataset cats_vs_dogs e do framework TensorFlow.
-Autores do MobileNetV2 : Pelo excelente modelo pré-treinado.
-Comunidade Open Source : Por fornecer ferramentas e recursos que facilitam o desenvolvimento de projetos de IA.
-
+TensorFlow Team: Pela disponibilização do dataset cats_vs_dogs e do framework TensorFlow.
+Autores do MobileNetV2: Pelo excelente modelo pré-treinado.
+Comunidade Open Source: Por fornecer ferramentas e recursos que facilitam o desenvolvimento de projetos de IA.
 📸 Exemplo de Predição
 Exemplo de Predição
 
 Predição: Gato
 Confiança: 98.76%
-
 🌐 Links Úteis
 TensorFlow Documentation
 MobileNetV2 Paper
